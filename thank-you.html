@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Personalised Action Plan — Hello Wedding Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Zenler reset */
+#hwp-ty-root {
+  margin: -20px -20px 0 -20px !important;
+  padding: 0 !important;
+  width: calc(100% + 40px) !important;
+  max-width: none !important;
+}
+
+:root {
+  --brand: #3B3C6D;
+  --brand-dark: #2A2B52;
+  --pink: #FB478E;
+  --pink-soft: #fff0f5;
+  --cream: #FAF8F6;
+  --soft: #F3F0ED;
+  --ink: #1a1a2e;
+  --muted: #6b6b82;
+  --green: #246b3a;
+  --green-bg: #EAF6EF;
+}
+
+#hwp-ty-root {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ============ HERO ============ */
+.ty-hero {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  color: #fff;
+  padding: 56px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ty-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(251,71,142,0.18);
+}
+.ty-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(251,71,142,0.1);
+}
+.ty-hero-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.brand-mark-dark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+.brand-mark-dark .brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pink);
+}
+.brand-mark-dark .brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.brand-mark-dark .brand-name em {
+  font-style: italic;
+  color: var(--pink);
+  font-weight: 500;
+}
+.ty-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 18px;
+}
+.ty-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+.ty-title em { font-style: italic; color: #ffb8d4; font-weight: 500; }
+.ty-sub {
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* ============ CONTENT ============ */
+.ty-content {
+  max-width: 780px;
+  margin: -50px auto 0;
+  padding: 0 20px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+/* No results state */
+.no-results-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 12px 60px rgba(59,60,109,0.1);
+}
+.no-results-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: 16px;
+}
+.no-results-body {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.no-results-btn {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.no-results-btn:hover { transform: translateY(-2px); }
+
+/* Welcome card */
+.welcome-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 44px;
+  margin-bottom: 28px;
+  box-shadow: 0 12px 60px rgba(59,60,109,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.welcome-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pink), var(--brand));
+}
+.welcome-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 14px;
+}
+.welcome-head {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+.welcome-head em { font-style: italic; color: var(--pink); font-weight: 500; }
+.welcome-body {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.75;
+}
+.welcome-body p { margin-bottom: 14px; }
+.welcome-body p:last-child { margin-bottom: 0; }
+
+/* Score strip */
+.score-strip {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 20px rgba(59,60,109,0.05);
+}
+.score-strip-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+.score-card {
+  background: var(--cream);
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.score-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+.score-card.strong::after { background: #22c55e; }
+.score-card.mid::after { background: #f59e0b; }
+.score-card.weak::after { background: var(--pink); }
+.score-area {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.score-pct {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+.score-card.strong .score-pct { color: #166534; }
+.score-card.mid .score-pct { color: #92400e; }
+.score-card.weak .score-pct { color: #9d174d; }
+
+/* Priority banner */
+.priority-banner {
+  background: linear-gradient(135deg, var(--pink) 0%, #ff6da3 100%);
+  color: #fff;
+  border-radius: 24px;
+  padding: 36px 40px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.priority-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+}
+.priority-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  position: relative;
+}
+.priority-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  position: relative;
+}
+.priority-sub {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.95;
+  position: relative;
+}
+
+/* Action plan — the stories */
+.plan-section {
+  background: #fff;
+  border-radius: 24px;
+  padding: 44px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(59,60,109,0.05);
+  position: relative;
+}
+.plan-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.plan-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--pink);
+  opacity: 0.4;
+}
+.plan-area {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.plan-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.plan-score-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: 6px;
+}
+.plan-score-pill.strong { background: var(--green-bg); color: var(--green); }
+.plan-score-pill.mid { background: #FFF7ED; color: #92400e; }
+.plan-score-pill.weak { background: var(--pink-soft); color: #9d174d; }
+
+.plan-story {
+  background: var(--cream);
+  border-left: 3px solid var(--pink);
+  border-radius: 0 14px 14px 0;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.75;
+  font-style: italic;
+}
+.plan-story-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 10px;
+  font-style: normal;
+  display: block;
+}
+
+.plan-body {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.plan-body p { margin-bottom: 12px; }
+.plan-body p:last-child { margin-bottom: 0; }
+
+.plan-action {
+  background: var(--pink-soft);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.6;
+}
+.plan-action-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 6px;
+}
+
+/* Bonus section — enquiry responses */
+.bonus-section {
+  background: linear-gradient(135deg, #fff9f5, #fff);
+  border: 2px dashed rgba(251,71,142,0.3);
+  border-radius: 24px;
+  padding: 36px 40px;
+  margin-bottom: 28px;
+}
+.bonus-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 12px;
+}
+.bonus-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.bonus-body {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.75;
+}
+.bonus-body p { margin-bottom: 12px; }
+.bonus-body p:last-child { margin-bottom: 0; }
+
+/* WBW invitation */
+.wbw-section {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  color: #fff;
+  border-radius: 28px;
+  padding: 56px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.wbw-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(251,71,142,0.15);
+}
+.wbw-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 16px;
+  position: relative;
+}
+.wbw-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  position: relative;
+}
+.wbw-title em { font-style: italic; color: #ffb8d4; font-weight: 500; }
+.wbw-body {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 1.75;
+  max-width: 520px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+.wbw-list {
+  text-align: left;
+  max-width: 420px;
+  margin: 0 auto 32px;
+  list-style: none;
+  position: relative;
+}
+.wbw-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.wbw-list li::before {
+  content: '→';
+  color: var(--pink);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.wbw-pricing {
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px 28px;
+  display: inline-block;
+  margin-bottom: 28px;
+  position: relative;
+}
+.wbw-pricing-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+.wbw-pricing-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+.wbw-pricing-amount span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.wbw-pricing-note {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+.wbw-btn {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  padding: 18px 44px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 6px 24px rgba(251,71,142,0.4);
+  position: relative;
+}
+.wbw-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(251,71,142,0.5); }
+.wbw-sub {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.7;
+  position: relative;
+}
+
+/* Signature */
+.signature-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.signature-section p { margin-bottom: 14px; }
+.signature-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--brand);
+  margin-top: 8px;
+}
+
+/* ============ MOBILE ============ */
+@media (max-width: 640px) {
+  .ty-hero { padding: 40px 20px 60px; }
+  .ty-content { margin-top: -40px; padding-bottom: 60px; }
+  .welcome-card { padding: 32px 24px; }
+  .welcome-head { font-size: 24px; }
+  .score-strip { padding: 24px; }
+  .priority-banner { padding: 28px 24px; }
+  .priority-title { font-size: 26px; }
+  .plan-section { padding: 32px 24px; }
+  .plan-title { font-size: 24px; }
+  .plan-number { font-size: 40px; }
+  .bonus-section { padding: 28px 24px; }
+  .wbw-section { padding: 40px 24px; }
+  .wbw-title { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+
+<div id="hwp-ty-root">
+
+<!-- HERO -->
+<section class="ty-hero">
+  <div class="ty-hero-inner">
+    <div class="brand-mark-dark">
+      <div class="brand-dot"></div>
+      <div class="brand-name">Hello Wedding <em>Pro</em></div>
+    </div>
+    <div class="ty-eyebrow">Your plan is ready</div>
+    <h1 class="ty-title">Your personalised <em>action plan</em></h1>
+    <p class="ty-sub" id="ty-sub">Exactly what to fix first, second, and third — in the order that'll get you booking-ready fastest.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<main class="ty-content" id="plan-mount">
+  <!-- Populated by JS -->
+</main>
+
+</div><!-- end hwp-ty-root -->
+
+<script>
+const SECTIONS = {
+  pricing: { label: 'Pricing Confidence',   tool: 'Price for Profit',    color: '#FB478E' },
+  leads:   { label: 'Lead Tracking',         tool: 'Lead Tracker',        color: '#3B3C6D' },
+  ica:     { label: 'Higher Paying Clients', tool: 'Find Your Ideal Client', color: '#7C6FCD' },
+  social:  { label: 'Social Media',          tool: 'Social Media Planner', color: '#E8845C' },
+  income:  { label: 'Income Goals',          tool: 'Income Planner',      color: '#2DA05A' },
+};
+
+// DARINA'S STORIES — woven from the shift stories PDF, adapted for peer voice
+const PLAN_CONTENT = {
+  pricing: {
+    story: "After the pandemic, Mark and I sat down and did the hard maths. We worked out exactly how many hours went into every wedding — not just the day itself, but the prep, the admin, the editing. We subtracted our costs. And we built a minimum price we could hold with confidence. From that point on, we never discounted. We even had a line ready in our head for when the question came up. It worked because we came across sure of ourselves — no BS, just honesty.",
+    weak: {
+      body: "<p>If your pricing feels uncertain, it's almost never a confidence problem — it's a numbers problem. You can't hold a price with conviction if you don't know what you actually need to earn to live. That's why the first thing to do is work backwards from your real income goal, factoring in every hour you put into a wedding.</p><p>Once you've done that maths, something shifts. You stop apologising for your price because you know why it's that number. And when couples push back, you have a line ready instead of a panic.</p>",
+      action: "Sit down this week and calculate the real hours behind one wedding — prep, admin, the day itself, editing, follow-up. Divide by your income goal for the year and the number of weddings you want to take on. That's your true minimum price. Don't go below it."
+    },
+    mid: {
+      body: "<p>You're on the right track but there's still a gap between what you charge and what you'd charge if you were completely sure. That gap is costing you money on every single booking.</p><p>The fix is building a pricing structure that's tied directly to your real income goal — not the market, not what others charge, but what you need to live the life you want.</p>",
+      action: "Audit your last five bookings. Did any of them pay you less than your true hourly rate once you factor in prep, admin, and editing? If yes, your price needs to come up. Start with the next enquiry."
+    },
+    strong: {
+      body: "<p>Your pricing is working. The opportunity now is in how you present it to the world. Couples want transparency — if they can't see your pricing on your website, most of them move on to a supplier who shows it. Being open about your price doesn't lose you bookings. It attracts the right ones.</p>",
+      action: "Don't be afraid to show your pricing on your website. Couples want transparency — if they don't see your price, they're moving on. Stand by your price and don't discount. The couples who are the right fit for you will book. The ones haggling aren't your clients anyway."
+    }
+  },
+  leads: {
+    story: "Years ago we made the worst mistake a wedding business can make — we double-booked. We had handwritten notes in diaries we rarely opened, enquiries we never followed up on. We got lucky because the pandemic cancelled both weddings, but we swore it would never happen again. So we built a system. Every enquiry logged. Every deposit tracked. Every follow-up scheduled. And a system that wouldn't let us book the same day twice. What changed the game was that we could finally see where our best leads were coming from — Instagram, referrals, specific venues — and put our focus there.",
+    weak: {
+      body: "<p>Enquiries are slipping through the cracks right now, and each one is potentially a lost booking. Higher-paying couples often enquire with multiple suppliers — whoever responds best and follows up consistently is the one who gets the booking.</p><p>The fix isn't working harder. It's having a system so basic that enquiries can't fall through.</p>",
+      action: "This week: create a single place to log every enquiry that comes in — date, couple names, venue, their question, what you replied, when to follow up. Even a simple spreadsheet works. Then set follow-ups in your calendar. Don't trust your memory."
+    },
+    mid: {
+      body: "<p>You're responding but the follow-up is inconsistent — which is where most bookings are actually won. Most couples don't book on the first reply. They book on the second or third touch.</p><p>Building a consistent follow-up habit is one of the fastest ways to increase your bookings without changing anything else.</p>",
+      action: "Pick a day each week — same day every week — where you review every open enquiry and send a follow-up to anyone you haven't heard back from. It takes 30 minutes and it will make a meaningful difference to your booking rate."
+    },
+    strong: {
+      body: "<p>Your lead system is working. Now use it as intelligence. Where are your best enquiries actually coming from? Which venues? Which sources? That data tells you exactly where to spend your marketing energy.</p>",
+      action: "Pull the last 20 enquiries. Tag them by source and by venue. Look for patterns. Then double down on whatever's already working."
+    }
+  },
+  ica: {
+    story: "We knew we wanted to film weddings for couples who valued beautiful films and were willing to pay for them. But we had to get specific — who were these couples actually? We figured out they were working professionals, cash-rich but time-poor, getting married at the top venues in our area. We did a deep dive on their personalities and built everything around that. We only posted content from top venues. We gave shout-outs to the top suppliers who worked at those venues. Our stories were about travel, fitness, good food — the things our couples cared about. The result? Referrals from friends and family, all the same personality type. It became self-sustaining.",
+    weak: {
+      body: "<p>If you haven't defined your ideal client, your marketing is speaking to everyone — which in practice means connecting with no one. The higher-paying couples you want to attract are looking for suppliers who feel right for them. If your content is generic, they scroll past.</p><p>This isn't about excluding anyone. It's about making sure the right person recognises themselves when they see you.</p>",
+      action: "Write out a one-page profile of your ideal client. Not demographics — details. Where do they get married? What do they do for work? What do they scroll through on their phone? What are they actually afraid of when booking their wedding? This profile becomes the filter for every piece of content and every enquiry reply."
+    },
+    mid: {
+      body: "<p>You have a sense of who you want to work with, but you haven't built your business around them yet. That's the next step. Once your marketing is aimed directly at a specific kind of couple, everything feels sharper — your content, your replies, even your pricing.</p>",
+      action: "Pick one venue where your ideal couples book. This week, create three pieces of content that are specifically about that venue — any videos you may have, your favourite spots, how you work with that venue's style. Watch what happens to the enquiries."
+    },
+    strong: {
+      body: "<p>You know your ideal client well. The next level is venue-specific content. If your ideal couples book at three or four top venues, you want to be the supplier those venues recommend without hesitation.</p>",
+      action: "Audit your last 20 posts. How many are venue-specific? If it's fewer than half, adjust the mix. Venue-led content is one of the most reliable ways to attract the exact enquiries you want."
+    }
+  },
+  social: {
+    story: "Social media will burn you out if you treat it like a popularity contest. We tried everything. Algorithms change every day and what worked yesterday doesn't work today. But once we understood the basics, things changed. The algorithm works like Google — it looks for keywords. So every post needs to mention what you do and where you do it. 'Wedding videographer Cork.' 'Wedding makeup artist Kildare.' The couples searching for those exact terms are the ones you want. When we started doing this consistently, three posts a week with clear keywords tied to our top venues, our reach and our followers grew noticeably.",
+    weak: {
+      body: "<p>Inconsistent posting means the couples you want to attract aren't seeing you. Instagram rewards recency — if you haven't posted this week, you're invisible in searches. But the fix isn't posting more for the sake of it. It's posting with purpose.</p>",
+      action: "Set a minimum of three posts a week for the next month. Every post must include two things: what you do, and where you do it. 'Wedding photographer Kildare.' 'Wedding florist Cork.' Those keywords are how new couples find you."
+    },
+    mid: {
+      body: "<p>You're showing up but the message isn't clear enough. The algorithm and the right couples both need to understand what you do and who you do it for within seconds of landing on your profile.</p>",
+      action: "Rewrite your bio this week. First line: what you do and where. Second line: who you do it for. Third line: one thing that makes you different. Then update your three most recent posts with keyword-rich captions."
+    },
+    strong: {
+      body: "<p>Your social is working. Now look at the data. Which posts generated enquiries? Which venues keep showing up? Your audience is telling you what they want — follow the signal.</p>",
+      action: "Look at your top five posts from the last three months. What do they have in common? Make more of that. Cut everything that isn't pulling its weight."
+    }
+  },
+  income: {
+    story: "For years we had an annual income goal but we never went deep into it. The big number felt like pressure we couldn't hold. So we broke it down. How many weddings did we want that year? How much did each one need to bring in? How many enquiries did we need to get to that number of bookings, based on our conversion rate? Suddenly the goal wasn't an impossible number — it was a specific weekly enquiry target. Everything else followed from there. The goal stopped being scary and became a plan.",
+    weak: {
+      body: "<p>Without an income goal, every booking feels like a win — even the ones that aren't moving you forward. Knowing your real number changes everything: how you price, how many weddings you take on, which enquiries you prioritise.</p>",
+      action: "Write down what you need to earn this year to live comfortably. Not aspirational — actual. Then divide by the number of weddings you realistically want to take on. That's your minimum booking value. Anything below it is costing you money."
+    },
+    mid: {
+      body: "<p>You have the outline of a goal but it's not connected to your day-to-day bookings. That means you can't tell in real time whether you're on track or drifting. Connecting the two is what turns a goal into a plan.</p>",
+      action: "Build a simple tracker. Your annual goal, divided into monthly targets. Every time a booking comes in, log it against the monthly target. Review weekly. This one habit changes how you run your business."
+    },
+    strong: {
+      body: "<p>You have strong financial clarity. Make sure your pricing is directly locked to your income goal — the two should move together. Every price review should start with your income target, not the market.</p>",
+      action: "When you review pricing next, start with your income goal, not your competitors' rates. Work backwards from the life you want to the price you need. That's the only number that matters."
+    }
+  }
+};
+
+const ENQUIRY_BONUS = {
+  title: "One more thing — your enquiry replies",
+  body: `<p>This one isn't in the assessment, but it's one of the fastest wins you can make — and it takes about an hour to set up.</p>
+  <p>Every enquiry tells you the same two things and asks the same two things. They tell you their wedding date and their venue. They ask your price and your availability. That's it. So you can build one template that covers all of it — and just swap out the venue name and the pricing when needed.</p>
+  <p>Here's the secret that makes this work: <strong>use the first line in your response to compliment their venue</strong>. "Oh, [venue name] is one of my favourite venues to work at" or "what a beautiful choice, the light there is gorgeous." That one line creates a connection straight away — before you've even got to your price or availability. Couples feel seen. And they remember you.</p>
+  <p>Once your template is set, you can reply within the hour — even during a wedding. Copy, paste, personalise, send. No more panic. No more rewriting.</p>
+  <p><strong>This week:</strong> write your template. Open with a venue compliment. Then cover price and availability. Keep it warm but not long. Test it on your next enquiry.</p>`
+};
+
+function classify(pct) {
+  if (pct >= 75) return 'strong';
+  if (pct >= 45) return 'mid';
+  return 'weak';
+}
+
+function render() {
+  const mount = document.getElementById('plan-mount');
+
+  let stored = null;
+  try {
+    const raw = localStorage.getItem('hwp_assessment_results');
+    if (raw) stored = JSON.parse(raw);
+  } catch(e) {}
+
+  if (!stored || !stored.scores) {
+    mount.innerHTML = `
+      <div class="no-results-card">
+        <div class="no-results-title">Thanks for signing up!</div>
+        <div class="no-results-body">It looks like you signed up on a different device, or your assessment results didn't save properly. Head back to the assessment to see your personalised results — it takes 3 minutes.</div>
+        <a href="/" class="no-results-btn">Take the assessment →</a>
+      </div>`;
+    return;
+  }
+
+  const scores = stored.scores;
+  const sorted = Object.entries(scores)
+    .map(([key, s]) => ({ key, ...s, ...SECTIONS[key] }))
+    .sort((a, b) => a.pct - b.pct);
+
+  const biggest = sorted[0];
+
+  // Build the full plan
+  let html = `
+    <div class="welcome-card">
+      <div class="welcome-kicker">How to use your plan</div>
+      <h2 class="welcome-head">Built around <em>your</em> answers — not a generic checklist</h2>
+      <div class="welcome-body">
+        <p>Your plan starts with your lowest-scoring area because that's where you'll see the biggest change in your business — fast. Work through it in the order it appears. Don't skip ahead.</p>
+        <p>For each area, you'll get what to focus on, one concrete action you can take this week, and a quick look at <em>why it works</em> — drawn from what we've seen in our own business and in hundreds of other wedding suppliers'.</p>
+        <p>Start with number one. That's the one that matters most.</p>
+      </div>
+    </div>
+
+    <div class="score-strip">
+      <div class="score-strip-title">Your scores at a glance</div>
+      <div class="score-grid">
+        ${sorted.map(s => `
+          <div class="score-card ${classify(s.pct)}">
+            <div class="score-area">${s.label}</div>
+            <div class="score-pct">${s.pct}%</div>
+          </div>`).join('')}
+      </div>
+    </div>
+
+    <div class="priority-banner">
+      <div class="priority-label">🚀 Start here first</div>
+      <div class="priority-title">${biggest.label}</div>
+      <div class="priority-sub">Your lowest score at ${biggest.pct}%. This is where you'll see the fastest change.</div>
+    </div>
+  `;
+
+  // Render each of the 5 areas in priority order
+  sorted.forEach((s, i) => {
+    const level = classify(s.pct);
+    const content = PLAN_CONTENT[s.key];
+    const levelContent = content[level];
+    html += `
+      <div class="plan-section">
+        <div class="plan-header">
+          <div class="plan-number">${String(i + 1).padStart(2, '0')}</div>
+          <div>
+            <div class="plan-area">Priority ${i + 1} · ${s.tool}</div>
+            <h3 class="plan-title">
+              ${s.label}
+              <span class="plan-score-pill ${level}">${s.pct}% · ${level === 'strong' ? 'Strong' : level === 'mid' ? 'Developing' : 'Needs work'}</span>
+            </h3>
+          </div>
+        </div>
+        <div class="plan-story">
+          <span class="plan-story-label">Why it works</span>
+          ${content.story}
+        </div>
+        <div class="plan-body">${levelContent.body}</div>
+        <div class="plan-action">
+          <div class="plan-action-label">Do this week</div>
+          ${levelContent.action}
+        </div>
+      </div>
+    `;
+  });
+
+  // Bonus: enquiry responses
+  html += `
+    <div class="bonus-section">
+      <div class="bonus-label">💡 A bonus from me</div>
+      <h3 class="bonus-title">${ENQUIRY_BONUS.title}</h3>
+      <div class="bonus-body">${ENQUIRY_BONUS.body}</div>
+    </div>
+  `;
+
+  // WBW invitation
+  html += `
+    <div class="wbw-section">
+      <div class="wbw-kicker">If you want help doing all this</div>
+      <h2 class="wbw-title">This is why we built <em>WBW</em></h2>
+      <p class="wbw-body">Wedding Business Workspace is the toolkit we built because we needed it ourselves. Every tool in it exists because one of the five areas you just saw was eating our business alive. We built the fix, then we polished it, then we opened it up to other solo wedding suppliers.</p>
+      <ul class="wbw-list">
+        <li>A Lead Tracker that means you never lose an enquiry again</li>
+        <li>A Price for Profit tool that builds your minimum price from your real income goal</li>
+        <li>A Find Your Ideal Client workspace — the same deep dive we did on ours</li>
+        <li>A Social Media Planner built around your top venues</li>
+        <li>An Enquiry Response tool so you reply in minutes, not hours</li>
+        <li>An Income Planner that turns your annual goal into weekly targets</li>
+      </ul>
+      <div class="wbw-pricing">
+        <div class="wbw-pricing-label">Founding member price</div>
+        <div class="wbw-pricing-amount">€29<span>/month</span></div>
+        <div class="wbw-pricing-note">Locked for life · 7-day free trial</div>
+      </div>
+      <br>
+      <a href="https://helloweddingpro.github.io/wbw-tools/" class="wbw-btn" target="_blank" rel="noopener">See inside WBW →</a>
+      <div class="wbw-sub">Start your 7-day free trial · Cancel anytime</div>
+    </div>
+
+    <div class="signature-section">
+      <p>That's your plan. I hope it's useful.</p>
+      <p>If you have questions or want to chat about any of it, just hit reply to my welcome email. It goes straight to me.</p>
+      <div class="signature-name">Darina</div>
+    </div>
+  `;
+
+  mount.innerHTML = html;
+}
+
+render();
+</script>
+
+</body>
+</html>
