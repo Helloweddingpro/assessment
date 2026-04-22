@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello Wedding Pro — Find out what's costing you bookings</title>
+<meta name="description" content="Free 3-minute business assessment for wedding suppliers. Find out what's costing you bookings and get a personalised plan from Wedding Business Workspace — the tools built to turn more enquiries into bookings.">
+<meta name="keywords" content="wedding business workspace, tools for wedding suppliers, wedding business dashboard, wedding business software, wedding pricing, wedding enquiries, wedding bookings">
+<meta property="og:title" content="Find out what's costing you bookings — Hello Wedding Pro">
+<meta property="og:description" content="A 3-minute assessment for wedding suppliers. Pinpoint what's costing you bookings and get a clear plan for what to fix first.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Find out what's costing you bookings">
+<meta name="twitter:description" content="A 3-minute assessment for wedding suppliers. Pinpoint what's costing you bookings and get a clear plan for what to fix first.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#hwp-root {
+  margin: -20px -20px 0 -20px !important;
+  padding: 0 !important;
+  width: calc(100% + 40px) !important;
+  max-width: none !important;
+}
+
+:root {
+  --brand: #3B3C6D;
+  --brand-dark: #2A2B52;
+  --pink: #FB478E;
+  --pink-soft: #fff0f5;
+  --cream: #FAF8F6;
+  --soft: #F3F0ED;
+  --ink: #1a1a2e;
+  --muted: #6b6b82;
+  --green: #246b3a;
+  --green-bg: #EAF6EF;
+}
+
+#hwp-root {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--cream) 0%, #fff 100%);
+  padding: 28px 20px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251,71,142,0.08), transparent 70%);
+  pointer-events: none;
+}
+.hero-inner { max-width: 880px; margin: 0 auto; position: relative; z-index: 1; }
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  justify-content: center;
+}
+.brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--pink); }
+.brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--brand);
+  letter-spacing: 0.02em;
+}
+.brand-name em { font-style: italic; color: var(--pink); font-weight: 500; }
+.hero-eyebrow {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 20px;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 6vw, 62px);
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.05;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+.hero-title em { font-style: italic; color: var(--pink); font-weight: 500; }
+.hero-sub {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 580px;
+  margin: 0 auto 32px;
+}
+.hero-meta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 36px;
+}
+.hero-meta span { display: flex; align-items: center; gap: 6px; }
+.hero-meta span::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--pink);
+}
+
+.assess-card {
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 12px 60px rgba(59,60,109,0.08), 0 2px 8px rgba(59,60,109,0.04);
+  max-width: 760px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.assess-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pink), var(--brand));
+}
+.intro-inner { padding: 44px 44px 40px; text-align: center; }
+.intro-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 14px;
+}
+.intro-head {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.intro-head em { font-style: italic; color: var(--pink); font-weight: 500; }
+.intro-body {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+.intro-benefits {
+  text-align: left;
+  max-width: 440px;
+  margin: 0 auto 32px;
+  list-style: none;
+}
+.intro-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.intro-benefits li::before {
+  content: '→';
+  color: var(--pink);
+  font-weight: 800;
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.start-btn {
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  padding: 18px 44px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.02em;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 6px 20px rgba(251,71,142,0.32);
+}
+.start-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(251,71,142,0.42); }
+.start-sub {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+#question-screen { display: none; padding: 36px 20px 60px; }
+.question-wrap { max-width: 760px; margin: 0 auto; }
+.progress-wrap { margin-bottom: 24px; }
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--brand);
+  opacity: 0.7;
+}
+.progress-bar-bg {
+  background: rgba(59,60,109,0.1);
+  border-radius: 999px;
+  height: 5px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  background: linear-gradient(90deg, var(--pink), #ff8cb8);
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.q-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 40px rgba(59,60,109,0.06);
+  animation: fadeUp 0.4s ease forwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.section-label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.q-number {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.q-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.q-sub {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+.choices { display: grid; gap: 10px; }
+.choice-btn {
+  background: var(--soft);
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 16px 20px;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand);
+  transition: all 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.4;
+}
+.choice-btn:hover { border-color: var(--pink); background: var(--pink-soft); }
+.choice-btn.selected { border-color: var(--pink); background: var(--pink-soft); }
+.choice-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s;
+}
+.choice-btn.selected .choice-dot { background: var(--pink); border-color: var(--pink); }
+.choice-btn.selected .choice-dot::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+.slider-wrap { margin-top: 8px; }
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+input[type=range] {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(90deg, var(--pink) 0%, #e8e8f0 0%);
+  outline: none;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--pink);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(251,71,142,0.4);
+  border: 3px solid #fff;
+}
+input[type=range]::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--pink);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(251,71,142,0.4);
+  border: 3px solid #fff;
+}
+.slider-value {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--brand);
+  font-family: 'Cormorant Garamond', serif;
+}
+.slider-value span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-left: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+.q-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  gap: 12px;
+}
+.nav-back {
+  background: none;
+  border: 1.5px solid rgba(59,60,109,0.18);
+  padding: 12px 22px;
+  border-radius: 12px;
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.15s;
+}
+.nav-back:hover { background: var(--soft); }
+.nav-next {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: opacity 0.15s, transform 0.15s;
+  letter-spacing: 0.02em;
+}
+.nav-next:disabled { opacity: 0.35; cursor: not-allowed; }
+.nav-next:not(:disabled):hover { opacity: 0.9; transform: translateY(-1px); }
+
+#results-screen { display: none; padding: 36px 20px 20px; }
+.results-wrap { max-width: 780px; margin: 0 auto; }
+.results-hero {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  border-radius: 28px;
+  padding: 44px;
+  color: #fff;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.results-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(251,71,142,0.18);
+}
+.results-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(251,71,142,0.1);
+}
+.results-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 14px;
+  position: relative;
+}
+.results-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  position: relative;
+}
+.results-name em { font-style: italic; color: #ffb8d4; font-weight: 500; }
+.results-tagline {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 460px;
+  margin: 0 auto;
+  position: relative;
+}
+.scores-section-title {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+  text-align: center;
+}
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.score-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(59,60,109,0.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.score-card:hover { transform: translateY(-2px); }
+.score-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+.score-card.strong::after { background: #22c55e; }
+.score-card.mid::after { background: #f59e0b; }
+.score-card.weak::after { background: var(--pink); }
+.score-area {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.score-bar-bg {
+  background: rgba(59,60,109,0.08);
+  border-radius: 999px;
+  height: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.score-card.strong .score-bar-fill { background: #22c55e; }
+.score-card.mid .score-bar-fill { background: #f59e0b; }
+.score-card.weak .score-bar-fill { background: var(--pink); }
+.score-pct {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+.score-pct span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: 6px;
+}
+.score-card.strong .score-pct { color: #166534; }
+.score-card.mid .score-pct { color: #92400e; }
+.score-card.weak .score-pct { color: #9d174d; }
+
+.preview-card {
+  background: linear-gradient(135deg, var(--pink-soft), #fff);
+  border: 2px solid var(--pink);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+.preview-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 12px;
+}
+.preview-area {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.preview-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.unlock-section {
+  background: #fff;
+  border-radius: 28px;
+  padding: 48px 40px;
+  box-shadow: 0 12px 60px rgba(59,60,109,0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.unlock-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pink), var(--brand));
+}
+.unlock-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 16px;
+}
+.unlock-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+.unlock-title em { font-style: italic; color: var(--pink); font-weight: 500; }
+.unlock-body {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto 28px;
+}
+
+.transform-list {
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 28px 32px;
+  text-align: left;
+  max-width: 480px;
+  margin: 0 auto 28px;
+  list-style: none;
+}
+.transform-list-title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.transform-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.55;
+  border-bottom: 1px solid rgba(59,60,109,0.06);
+}
+.transform-list li:last-child { border-bottom: none; }
+.transform-list li::before {
+  content: '✓';
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background: var(--pink);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 1px;
+}
+
+.unlock-cta-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.3;
+  max-width: 460px;
+  margin: 0 auto 8px;
+}
+.unlock-cta-line em { font-style: italic; color: var(--pink); font-weight: 500; }
+.unlock-btn {
+  display: inline-block;
+  margin-top: 24px;
+  background: var(--pink);
+  color: #fff;
+  padding: 20px 48px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.02em;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 8px 28px rgba(251,71,142,0.38);
+}
+.unlock-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(251,71,142,0.48);
+}
+.unlock-reassure {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.retake-wrap { text-align: center; margin-top: 16px; margin-bottom: 40px; }
+.retake-btn {
+  background: none;
+  border: 1.5px solid rgba(59,60,109,0.2);
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.15s;
+}
+.retake-btn:hover { background: var(--soft); }
+
+@media (max-width: 640px) {
+  .intro-inner { padding: 32px 24px; }
+  .intro-head { font-size: 26px; }
+  .q-card { padding: 28px 24px; }
+  .q-text { font-size: 22px; }
+  .results-hero { padding: 32px 24px; }
+  .results-name { font-size: 32px; }
+  .preview-card { padding: 24px; }
+  .preview-area { font-size: 24px; }
+  .unlock-section { padding: 36px 24px; }
+  .unlock-title { font-size: 28px; }
+  .transform-list { padding: 22px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div id="hwp-root">
+
+<section class="hero" id="intro-screen">
+  <div class="hero-inner">
+    <div class="brand-mark">
+      <div class="brand-dot"></div>
+      <div class="brand-name">Hello Wedding <em>Pro</em></div>
+    </div>
+
+    <div class="hero-eyebrow">Free 3-minute business assessment</div>
+    <h1 class="hero-title">Find out what's <em>costing you bookings</em> — and what to fix first</h1>
+    <p class="hero-sub">If your enquiries have gone quiet, your prices feel shaky, or your diary isn't filling the way it used to — there's a reason. Ten questions will show you exactly where.</p>
+
+    <div class="hero-meta">
+      <span>10 questions</span>
+      <span>3 minutes</span>
+      <span>Instant results</span>
+    </div>
+
+    <div class="assess-card">
+      <div class="intro-inner">
+        <div class="intro-kicker">The Business Assessment</div>
+        <h2 class="intro-head">By the end of this, you'll know <em>exactly</em> where your next booking is getting stuck</h2>
+        <p class="intro-body">Most wedding suppliers don't have a booking problem. They have one specific weak spot that's quietly costing them thousands a year — and they can't see it from the inside.</p>
+
+        <ul class="intro-benefits">
+          <li>Pinpoint the one area that's costing you the most money right now</li>
+          <li>See how you score across the five things that actually move bookings</li>
+          <li>Get a clear first step — so you stop spinning and start fixing</li>
+        </ul>
+
+        <button class="start-btn" id="start-btn">Start the assessment →</button>
+        <div class="start-sub">Your first results appear without signing up for anything.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="question-screen">
+  <div class="question-wrap">
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="prog-label">Question 1 of 10</span>
+        <span id="prog-pct">0%</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="prog-fill" style="width:0%"></div>
+      </div>
+    </div>
+    <div id="q-mount"></div>
+  </div>
+</section>
+
+<section id="results-screen">
+  <div class="results-wrap" id="results-mount"></div>
+</section>
+
+</div>
+
+<script>
+const SECTIONS = {
+  pricing: { label: 'Pricing Confidence',   color: '#FB478E', tool: 'Price for Profit' },
+  leads:   { label: 'Lead Tracking',         color: '#3B3C6D', tool: 'Lead Tracker' },
+  ica:     { label: 'Higher Paying Clients', color: '#7C6FCD', tool: 'Find Your Ideal Client' },
+  social:  { label: 'Social Media',          color: '#E8845C', tool: 'Social Media Planner' },
+  income:  { label: 'Income Goals',          color: '#2DA05A', tool: 'Income Planner' },
+};
+
+const QUESTIONS = [
+  { id: 'q1', section: 'pricing', type: 'choice',
+    text: 'How do you currently decide what to charge for a wedding?',
+    sub: 'Be honest — there\'s no right answer here.',
+    choices: [
+      { text: 'I look at what others charge and match or undercut them', score: 1 },
+      { text: 'I charge what feels right — but I\'m not fully confident in it', score: 2 },
+      { text: 'I have a rough figure but I sometimes drop it when pushed', score: 2 },
+      { text: 'I have a minimum price based on my income goals and I hold it', score: 4 },
+    ] },
+  { id: 'q2', section: 'pricing', type: 'slider',
+    text: 'How confident are you presenting your price to a couple at a top venue — without apologising for it?',
+    sub: '1 = I find it really uncomfortable · 5 = completely confident',
+    min: 1, max: 5, default: 3 },
+  { id: 'q3', section: 'leads', type: 'choice',
+    text: 'What happens when an enquiry comes in right now?',
+    sub: 'Pick the one that best describes your current process.',
+    choices: [
+      { text: 'I reply when I remember — no real system', score: 1 },
+      { text: 'I reply quickly but don\'t track what happens after', score: 2 },
+      { text: 'I have a rough follow-up process but it\'s inconsistent', score: 2 },
+      { text: 'I have a clear system — I track every lead and follow up consistently', score: 4 },
+    ] },
+  { id: 'q4', section: 'leads', type: 'slider',
+    text: 'How often do you follow up after sending a quote with no response?',
+    sub: '1 = never / rarely · 5 = always — I have a clear follow-up plan',
+    min: 1, max: 5, default: 2 },
+  { id: 'q5', section: 'ica', type: 'choice',
+    text: 'How clearly can you describe your ideal higher paying client right now?',
+    sub: 'Think about your best bookings — the ones that paid well, felt easy and you\'d love more of.',
+    choices: [
+      { text: 'I take whoever enquires — I haven\'t thought about it', score: 1 },
+      { text: 'I have a feeling for who I love working with but nothing defined', score: 2 },
+      { text: 'I know who they are but haven\'t built my marketing around them', score: 3 },
+      { text: 'I have a clear profile — venue type, career, values — and I market directly to them', score: 4 },
+    ] },
+  { id: 'q6', section: 'ica', type: 'slider',
+    text: 'How focused is your marketing on attracting higher paying clients — rather than anyone who might book?',
+    sub: '1 = I\'m trying to appeal to everyone · 5 = everything I do is targeted at the right couple',
+    min: 1, max: 5, default: 2 },
+  { id: 'q7', section: 'social', type: 'choice',
+    text: 'How would you describe your social media presence right now?',
+    sub: 'Pick the most honest answer.',
+    choices: [
+      { text: 'Inconsistent — I post when I remember', score: 1 },
+      { text: 'Fairly regular but with no clear strategy or message', score: 2 },
+      { text: 'I post consistently but I\'m not sure it\'s attracting the right couples', score: 3 },
+      { text: 'Consistent, intentional and bringing in the right enquiries', score: 4 },
+    ] },
+  { id: 'q8', section: 'social', type: 'slider',
+    text: 'How clear are you on what to post to attract higher paying clients?',
+    sub: '1 = I have no idea what to post · 5 = I have a clear content strategy that works',
+    min: 1, max: 5, default: 2 },
+  { id: 'q9', section: 'income', type: 'choice',
+    text: 'Do you have a clear income goal for this year — and do you know if you\'re on track?',
+    sub: 'Think about whether you\'re running your business with a plan or hoping for the best.',
+    choices: [
+      { text: 'No — I don\'t have a specific income goal', score: 1 },
+      { text: 'I have a rough number in my head but nothing written down', score: 2 },
+      { text: 'I have a goal but I\'m not actively tracking progress', score: 2 },
+      { text: 'I have a clear goal and I track my bookings against it regularly', score: 4 },
+    ] },
+  { id: 'q10', section: 'income', type: 'slider',
+    text: 'How clearly does your pricing reflect what you actually need to earn to have a comfortable income?',
+    sub: '1 = I have no idea if my prices are right · 5 = my prices are built around my income goals',
+    min: 1, max: 5, default: 2 },
+];
+
+const PREVIEW_TEASERS = {
+  pricing: {
+    weak: 'Every time you send a quote, part of you is bracing for the "is there any wiggle room?" question. That knot in your stomach isn\'t a confidence issue — it\'s a signal that your price isn\'t built on anything solid yet. When it is, that knot disappears.',
+    mid: 'You\'re close, but not close enough to hold your price without flinching when someone pushes back. The gap between "I think this is my price" and "this is what I charge and I know why" is where most of your future income is hiding.',
+    strong: 'Your pricing is solid — but there\'s still a layer of polish that separates good from great. The way you present your price matters as much as the number. Small changes here can shift your booking rate meaningfully.'
+  },
+  leads: {
+    weak: 'Right now, bookings are slipping past you and you don\'t even know which ones. Every unreturned enquiry is a couple who went with someone who replied faster. Fixing this is the single fastest way to grow — no new marketing required.',
+    mid: 'You\'re replying, but what happens after? Most bookings don\'t come from the first reply — they come from the second or third touch. There\'s a booking or two a month sitting in your unread follow-ups right now.',
+    strong: 'Your lead process is working. The next level is using your own data to see where your best enquiries come from — so you can double down on what\'s already working instead of guessing.'
+  },
+  ica: {
+    weak: 'When you try to appeal to everyone, you connect with no one. Higher-paying couples are quietly scrolling past your content because nothing you post feels like it was made for them. Get specific about who you want, and the right enquiries start arriving.',
+    mid: 'You know the kind of couple you want to work with, but your content isn\'t pointed at them yet. Once it is, your enquiries change. The tyre-kickers drop off. The couples you actually want start showing up.',
+    strong: 'You\'ve got clarity on your ideal client. The next move is venue-specific — becoming the obvious choice at the venues your best couples book. This is where word-of-mouth starts compounding.'
+  },
+  social: {
+    weak: 'If you\'re posting when you remember, you\'re invisible to the couples searching right now. The fix isn\'t posting more — it\'s posting with purpose. A few deliberate posts a week beats daily noise every time.',
+    mid: 'You\'re showing up, but the message isn\'t landing clearly enough. The right couples should know what you do and whether you\'re for them within seconds. Tighten that, and your enquiries change quality, not just quantity.',
+    strong: 'Your social is working. The opportunity now is compound — doubling down on what\'s already pulling in enquiries and cutting what isn\'t. The data is already there if you know where to look.'
+  },
+  income: {
+    weak: 'Without a clear income goal, you can\'t tell if a booking is a good deal or a slow leak. Every yes feels like a win — but some of them are quietly costing you. Knowing your number changes every pricing decision you make.',
+    mid: 'You\'ve got the outline of a goal but it\'s disconnected from your day-to-day. That means you don\'t know in real time whether you\'re on track. Connecting the two is what turns "I hope this year works out" into "I know exactly what I need."',
+    strong: 'You\'ve got strong financial clarity. The final layer is making sure your pricing and your income goal are fully locked together — so every single booking is moving you toward the life you actually want.'
+  }
+};
+
+let currentQ = 0;
+let answers = {};
+
+function el(id) { return document.getElementById(id); }
+
+function startAssessment() {
+  el('intro-screen').style.display = 'none';
+  el('question-screen').style.display = 'block';
+  currentQ = 0;
+  answers = {};
+  renderQuestion();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetAssessment() {
+  currentQ = 0;
+  answers = {};
+  el('intro-screen').style.display = 'block';
+  el('question-screen').style.display = 'none';
+  el('results-screen').style.display = 'none';
+  el('results-mount').innerHTML = '';
+  try { localStorage.removeItem('hwp_assessment_results'); } catch(e) {}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[currentQ];
+  const total = QUESTIONS.length;
+  const pct = Math.round((currentQ / total) * 100);
+  el('prog-label').textContent = `Question ${currentQ + 1} of ${total}`;
+  el('prog-pct').textContent = pct + '%';
+  el('prog-fill').style.width = pct + '%';
+
+  const section = SECTIONS[q.section];
+  const existing = answers[q.id];
+  let inner = '';
+
+  if (q.type === 'choice') {
+    inner = `
+      <div class="section-label" style="background:${section.color}">${section.label}</div>
+      <div class="q-number">Question ${currentQ + 1} of ${total}</div>
+      <div class="q-text">${q.text}</div>
+      <div class="q-sub">${q.sub}</div>
+      <div class="choices">
+        ${q.choices.map((c, i) => `
+          <button class="choice-btn ${existing?.index === i ? 'selected' : ''}" onclick="selectChoice(${i}, ${c.score})" data-idx="${i}">
+            <div class="choice-dot"></div>
+            <span>${c.text}</span>
+          </button>
+        `).join('')}
+      </div>`;
+  } else {
+    const val = existing?.value ?? q.default;
+    inner = `
+      <div class="section-label" style="background:${section.color}">${section.label}</div>
+      <div class="q-number">Question ${currentQ + 1} of ${total}</div>
+      <div class="q-text">${q.text}</div>
+      <div class="q-sub">${q.sub}</div>
+      <div class="slider-wrap">
+        <div class="slider-labels">
+          <span>${q.min} — Not at all</span>
+          <span>${q.max} — Completely</span>
+        </div>
+        <input type="range" min="${q.min}" max="${q.max}" value="${val}" id="slider-${q.id}" oninput="updateSlider(this)">
+        <div class="slider-value" id="slider-val-${q.id}">${val}<span>/ ${q.max}</span></div>
+      </div>`;
+  }
+
+  const canNext = q.type === 'slider' ? true : (existing !== undefined);
+
+  el('q-mount').innerHTML = `
+    <div class="q-card">
+      ${inner}
+      <div class="q-nav">
+        <button class="nav-back" onclick="goBack()" style="${currentQ === 0 ? 'visibility:hidden' : ''}">← Back</button>
+        <button class="nav-next" id="next-btn" onclick="goNext()" ${!canNext ? 'disabled' : ''}>
+          ${currentQ === total - 1 ? 'See my results →' : 'Next →'}
+        </button>
+      </div>
+    </div>`;
+
+  if (q.type === 'slider') {
+    const sliderEl = el(`slider-${q.id}`);
+    if (sliderEl) updateSlider(sliderEl);
+  }
+}
+
+function selectChoice(idx, score) {
+  const q = QUESTIONS[currentQ];
+  answers[q.id] = { index: idx, score, section: q.section };
+  document.querySelectorAll('.choice-btn').forEach((btn, i) => btn.classList.toggle('selected', i === idx));
+  el('next-btn').disabled = false;
+}
+
+function updateSlider(elm) {
+  const q = QUESTIONS[currentQ];
+  const val = Number(elm.value);
+  const pct = ((val - q.min) / (q.max - q.min)) * 100;
+  elm.style.background = `linear-gradient(90deg, var(--pink) ${pct}%, #e8e8f0 ${pct}%)`;
+  const valEl = el(`slider-val-${q.id}`);
+  if (valEl) valEl.innerHTML = `${val}<span>/ ${q.max}</span>`;
+  const score = Math.round(1 + (val - q.min) / (q.max - q.min) * 3);
+  answers[q.id] = { value: val, score, section: q.section };
+}
+
+function goNext() {
+  const q = QUESTIONS[currentQ];
+  if (q.type === 'slider') {
+    const elm = el(`slider-${q.id}`);
+    if (elm) updateSlider(elm);
+  }
+  if (!answers[q.id]) return;
+  if (currentQ < QUESTIONS.length - 1) {
+    currentQ++;
+    renderQuestion();
+    el('q-mount').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    finishAssessment();
+  }
+}
+
+function goBack() {
+  if (currentQ > 0) {
+    currentQ--;
+    renderQuestion();
+  }
+}
+
+function finishAssessment() {
+  const scores = {};
+  for (const key of Object.keys(SECTIONS)) {
+    const sectionAnswers = Object.values(answers).filter(a => a.section === key);
+    const total = sectionAnswers.reduce((s, a) => s + (a.score || 0), 0);
+    const max = sectionAnswers.length * 4;
+    scores[key] = { raw: total, max, pct: max ? Math.round((total / max) * 100) : 0 };
+  }
+
+  const resultsPackage = { scores, answers, completedAt: new Date().toISOString() };
+  try { localStorage.setItem('hwp_assessment_results', JSON.stringify(resultsPackage)); } catch(e) {}
+
+  showResults(scores);
+}
+
+function classify(pct) {
+  if (pct >= 75) return 'strong';
+  if (pct >= 45) return 'mid';
+  return 'weak';
+}
+
+function showResults(scores) {
+  el('intro-screen').style.display = 'none';
+  el('question-screen').style.display = 'none';
+  el('results-screen').style.display = 'block';
+
+  const sorted = Object.entries(scores)
+    .map(([key, s]) => ({ key, ...s, ...SECTIONS[key] }))
+    .sort((a, b) => a.pct - b.pct);
+
+  const biggest = sorted[0];
+  const preview = PREVIEW_TEASERS[biggest.key]?.[classify(biggest.pct)] || '';
+
+  el('results-mount').innerHTML = `
+    <div class="results-hero">
+      <div class="results-eyebrow">Your results are in</div>
+      <div class="results-name">Here's what's <em>actually</em> costing you bookings</div>
+      <div class="results-tagline">Your scores across the five things that decide whether your business grows or stays stuck.</div>
+    </div>
+
+    <div class="scores-section-title">Your five scores</div>
+    <div class="score-grid">
+      ${sorted.map(s => `
+        <div class="score-card ${classify(s.pct)}">
+          <div class="score-area">${s.label}</div>
+          <div class="score-bar-bg"><div class="score-bar-fill" style="width:${s.pct}%"></div></div>
+          <div class="score-pct">${s.pct}%<span>${classify(s.pct) === 'strong' ? 'Strong' : classify(s.pct) === 'mid' ? 'Developing' : 'Needs work'}</span></div>
+        </div>`).join('')}
+    </div>
+
+    <div class="preview-card">
+      <div class="preview-label">🎯 Your biggest leak</div>
+      <div class="preview-area">${biggest.label}</div>
+      <div class="preview-text">${preview}</div>
+    </div>
+
+    <div class="unlock-section">
+      <div class="unlock-eyebrow">Your full personalised plan</div>
+      <h2 class="unlock-title">Want to know <em>exactly</em> what to do about it?</h2>
+      <p class="unlock-body">Your score shows you where the leak is. Your full plan shows you how to plug it — step by step, in the right order, starting this week.</p>
+
+      <div class="transform-list">
+        <div class="transform-list-title">Imagine opening your inbox next month and…</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li>Reading enquiries from couples who already want to work with you — no haggling over price</li>
+          <li>Knowing which follow-up to send, when, and feeling confident about hitting your booking goal</li>
+          <li>Posting content that actually attracts the couples you want — not just polite likes</li>
+          <li>Looking at your diary for the year and seeing it fill up with weddings you\'re genuinely excited to take on</li>
+        </ul>
+      </div>
+
+      <div class="unlock-cta-line">Your plan shows you exactly <em>how to get there</em>.</div>
+
+      <a href="https://www.helloweddingpro.com/my-plan" class="unlock-btn">Unlock my full plan →</a>
+      <div class="unlock-reassure">Takes 30 seconds. Your answers are saved.</div>
+    </div>
+
+    <div class="retake-wrap">
+      <button class="retake-btn" id="retake-btn">← Retake assessment</button>
+    </div>
+  `;
+
+  setTimeout(() => {
+    document.querySelectorAll('.score-bar-fill').forEach(elm => {
+      const w = elm.style.width;
+      elm.style.width = '0%';
+      setTimeout(() => elm.style.width = w, 100);
+    });
+  }, 100);
+
+  const retakeBtn = el('retake-btn');
+  if (retakeBtn) retakeBtn.onclick = resetAssessment;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function wireButtons() {
+  const startBtn = el('start-btn');
+  if (startBtn) startBtn.onclick = startAssessment;
+}
+setTimeout(wireButtons, 100);
+setTimeout(wireButtons, 500);
+setTimeout(wireButtons, 1500);
+</script>
+
+</body>
+</html>
