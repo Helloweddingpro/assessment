@@ -17,10 +17,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 #hwp-root {
-  margin: -20px -20px 0 -20px !important;
-  padding: 0 !important;
-  width: calc(100% + 40px) !important;
-  max-width: none !important;
+  /* Standalone page — no parent container to fight. */
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -729,10 +729,15 @@ input[type=range]::-moz-range-thumb {
 .retake-btn:hover { background: var(--soft); }
 
 @media (max-width: 640px) {
+  .hero { padding: 24px 16px 36px; }
+  .hero::before { width: 260px; height: 260px; top: -80px; right: -80px; }
   .intro-inner { padding: 32px 24px; }
   .intro-head { font-size: 26px; }
+  .start-btn { padding: 16px 32px; font-size: 14px; }
   .q-card { padding: 28px 24px; }
   .q-text { font-size: 22px; }
+  #question-screen { padding: 28px 16px 50px; }
+  #results-screen { padding: 28px 16px 20px; }
   .results-hero { padding: 32px 24px; }
   .results-name { font-size: 32px; }
   .preview-card { padding: 24px; }
