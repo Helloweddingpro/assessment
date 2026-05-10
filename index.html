@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hello Wedding Pro — Find out what's costing you bookings</title>
-<meta name="description" content="Free 3-minute business assessment for wedding suppliers. Find out what's costing you bookings and get a personalised plan from Wedding Business Workspace — the tools built to turn more enquiries into bookings.">
+<meta name="description" content="Free 3-minute quiz for wedding suppliers. Find out what's costing you bookings and get a personalised plan to start booking more weddings — built around your business.">
 <meta name="keywords" content="wedding business workspace, tools for wedding suppliers, wedding business dashboard, wedding business software, wedding pricing, wedding enquiries, wedding bookings">
 <meta property="og:title" content="Find out what's costing you bookings — Hello Wedding Pro">
-<meta property="og:description" content="A 3-minute assessment for wedding suppliers. Pinpoint what's costing you bookings and get a clear plan for what to fix first.">
+<meta property="og:description" content="A 3-minute quiz for wedding suppliers. Pinpoint what's costing you bookings and get a clear plan to start booking more weddings.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Find out what's costing you bookings">
-<meta name="twitter:description" content="A 3-minute assessment for wedding suppliers. Pinpoint what's costing you bookings and get a clear plan for what to fix first.">
+<meta name="twitter:description" content="A 3-minute quiz for wedding suppliers. Pinpoint what's costing you bookings and get a clear plan to start booking more weddings.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -759,7 +759,7 @@ input[type=range]::-moz-range-thumb {
       <div class="brand-name">Hello Wedding <em>Pro</em></div>
     </div>
 
-    <div class="hero-eyebrow">Free 3-minute business assessment</div>
+    <div class="hero-eyebrow">Free 3-minute quiz</div>
     <h1 class="hero-title">Find out what's <em>costing you bookings</em> — and what to fix first</h1>
     <p class="hero-sub">If your enquiries have gone quiet, your prices feel shaky, or your diary isn't filling the way it used to — there's a reason. Ten questions will show you exactly where.</p>
 
@@ -771,7 +771,7 @@ input[type=range]::-moz-range-thumb {
 
     <div class="assess-card">
       <div class="intro-inner">
-        <div class="intro-kicker">The Business Assessment</div>
+        <div class="intro-kicker">The Wedding Business Quiz</div>
         <h2 class="intro-head">By the end of this, you'll know <em>exactly</em> where your next booking is getting stuck</h2>
         <p class="intro-body">Most wedding suppliers don't have a booking problem. They have one specific weak spot that's quietly costing them thousands a year — and they can't see it from the inside.</p>
 
@@ -781,7 +781,7 @@ input[type=range]::-moz-range-thumb {
           <li>Get a clear first step — so you stop spinning and start fixing</li>
         </ul>
 
-        <button class="start-btn" id="start-btn">Start the assessment →</button>
+        <button class="start-btn" id="start-btn">Take the quiz →</button>
         <div class="start-sub">Your first results appear without signing up for anything.</div>
       </div>
     </div>
@@ -816,8 +816,7 @@ const SECTIONS = {
   ica:     { label: 'Higher Paying Clients', color: '#7C6FCD', tool: 'Find Your Ideal Client' },
   social:  { label: 'Social Media',          color: '#E8845C', tool: 'Social Media Planner' },
   income:  { label: 'Income Goals',          color: '#2DA05A', tool: 'Income Planner' },
-};
-  const QUESTIONS = [
+};const QUESTIONS = [
   { id: 'q1', section: 'pricing', type: 'choice',
     text: 'How do you currently decide what to charge for a wedding?',
     sub: 'Be honest — there\'s no right answer here.',
@@ -1098,9 +1097,9 @@ function showResults(scores) {
     </div>
 
     <div class="unlock-section">
-      <div class="unlock-eyebrow">Your full personalised plan</div>
-      <h2 class="unlock-title">Want to know <em>exactly</em> what to do about it?</h2>
-      <p class="unlock-body">Your score shows you where the leak is. Your full plan shows you how to plug it — step by step, in the right order, starting this week.</p>
+      <div class="unlock-eyebrow">Your full results — and how to get more bookings</div>
+      <h2 class="unlock-title">Want to see exactly <em>how to start getting more bookings</em>?</h2>
+      <p class="unlock-body">You've seen your biggest leak. Your full results show you the other four areas — what's working, what's quietly getting in the way, and exactly what to fix to start getting more bookings.</p>
 
       <div class="transform-list">
         <div class="transform-list-title">Imagine opening your inbox next month and…</div>
@@ -1112,14 +1111,14 @@ function showResults(scores) {
         </ul>
       </div>
 
-      <div class="unlock-cta-line">Your plan shows you exactly <em>how to get there</em>.</div>
+      <div class="unlock-cta-line">Built around your answers. <em>Not a generic guide.</em></div>
 
-      <a href="https://www.helloweddingpro.com/f/business-assessment" class="unlock-btn">Unlock my full plan →</a>
+      <a href="https://www.helloweddingpro.com/f/business-assessment" class="unlock-btn">Send me my full results →</a>
       <div class="unlock-reassure">Takes 30 seconds. Your answers are saved.</div>
     </div>
 
     <div class="retake-wrap">
-      <button class="retake-btn" id="retake-btn">← Retake assessment</button>
+      <button class="retake-btn" id="retake-btn">← Retake quiz</button>
     </div>
   `;
 
