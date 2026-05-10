@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Personalised Action Plan — Hello Wedding Pro</title>
+<title>Your Full Results — Hello Wedding Pro</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -616,8 +616,8 @@
       <div class="brand-dot"></div>
       <div class="brand-name">Hello Wedding <em>Pro</em></div>
     </div>
-    <div class="ty-eyebrow">Your plan is ready</div>
-    <h1 class="ty-title">Your personalised <em>action plan</em></h1>
+    <div class="ty-eyebrow">Your full results are ready</div>
+    <h1 class="ty-title">Your full results — and <em>how to get more bookings</em></h1>
     <p class="ty-sub" id="ty-sub">Exactly what to fix first, second, and third — in the order that'll get you booking-ready fastest.</p>
   </div>
 </section>
@@ -729,7 +729,7 @@ const PLAN_CONTENT = {
 
 const ENQUIRY_BONUS = {
   title: "One more thing — your enquiry replies",
-  body: `<p>This one isn't in the assessment, but it's one of the fastest wins you can make — and it takes about an hour to set up.</p>
+  body: `<p>This one isn't in the quiz, but it's one of the fastest wins you can make — and it takes about an hour to set up.</p>
   <p>Every enquiry tells you the same two things and asks the same two things. They tell you their wedding date and their venue. They ask your price and your availability. That's it. So you can build one template that covers all of it — and just swap out the venue name and the pricing when needed.</p>
   <p>Here's the secret that makes this work: <strong>use the first line in your response to compliment their venue</strong>. "Oh, [venue name] is one of my favourite venues to work at" or "what a beautiful choice, the light there is gorgeous." That one line creates a connection straight away — before you've even got to your price or availability. Couples feel seen. And they remember you.</p>
   <p>Once your template is set, you can reply within the hour — even during a wedding. Copy, paste, personalise, send. No more panic. No more rewriting.</p>
@@ -756,8 +756,8 @@ function render() {
     mount.innerHTML = `
       <div class="no-results-card">
         <div class="no-results-title">Thanks for signing up!</div>
-        <div class="no-results-body">It looks like you signed up on a different device, or your assessment results didn't save properly. Head back to the assessment to see your personalised results — it takes 3 minutes.</div>
-        <a href="/" class="no-results-btn">Take the assessment →</a>
+        <div class="no-results-body">It looks like you signed up on a different device, or your quiz results didn't save properly. Head back to the quiz to see your full results — it takes 3 minutes.</div>
+        <a href="/" class="no-results-btn">Take the quiz →</a>
       </div>`;
     return;
   }
@@ -772,12 +772,12 @@ function render() {
   // Build the full plan
   let html = `
     <div class="welcome-card">
-      <div class="welcome-kicker">How to use your plan</div>
+      <div class="welcome-kicker">How to use your results</div>
       <h2 class="welcome-head">Built around <em>your</em> answers — so you can act on it straight away</h2>
       <div class="welcome-body">
-        <p>Your plan starts with your lowest-scoring area because that's where you'll see the biggest change in your business — fast. Work through it in the order it appears. Don't skip ahead.</p>
+        <p>Your results start with your lowest-scoring area because that's where you'll see the biggest change in your bookings — fast. Work through it in the order it appears. Don't skip ahead.</p>
         <p>For each area, you'll get what to focus on, one concrete action you can take this week, and a quick look at <em>why it works</em> — drawn from what we've seen in our own business and in hundreds of other wedding suppliers'.</p>
-        <p>Start with number one. That's the one that matters most.</p>
+        <p>Start with number one. That's the one that'll move the needle on your bookings most.</p>
       </div>
     </div>
 
@@ -795,7 +795,7 @@ function render() {
     <div class="priority-banner">
       <div class="priority-label">🚀 Start here first</div>
       <div class="priority-title">${biggest.label}</div>
-      <div class="priority-sub">Your lowest score at ${biggest.pct}%. This is where you'll see the fastest change.</div>
+      <div class="priority-sub">Your lowest score at ${biggest.pct}%. This is where you'll see the fastest change in your bookings.</div>
     </div>
   `;
 
